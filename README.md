@@ -33,7 +33,6 @@ conda search pycalphad --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
