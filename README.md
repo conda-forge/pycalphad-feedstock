@@ -11,6 +11,18 @@ Summary: CALPHAD tools for designing thermodynamic models, calculating phase dia
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pycalphad-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pycalphad-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/pycalphad-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pycalphad-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pycalphad-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pycalphad-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycalphad/badges/version.svg)](https://anaconda.org/conda-forge/pycalphad)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycalphad/badges/downloads.svg)](https://anaconda.org/conda-forge/pycalphad)
+
 Installing pycalphad
 ====================
 
@@ -66,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pycalphad-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pycalphad-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pycalphad-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pycalphad-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pycalphad-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pycalphad-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycalphad/badges/version.svg)](https://anaconda.org/conda-forge/pycalphad)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycalphad/badges/downloads.svg)](https://anaconda.org/conda-forge/pycalphad)
 
 
 Updating pycalphad-feedstock
