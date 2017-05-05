@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - python
+    - cython
     - setuptools
     - matplotlib
     - pandas
@@ -25,24 +26,21 @@ requirements:
     - sympy
     - pyparsing
     - tinydb
-    - autograd
     - scipy
-    - tqdm
     - dask >=0.10
     - distributed
     - numpy >=1.9
     - dill
   run:
     - python
+    - cython
     - matplotlib
     - pandas
     - xarray !=0.8
     - sympy
     - pyparsing
     - tinydb
-    - autograd
     - scipy
-    - tqdm
     - dask >=0.10
     - distributed
     - numpy >=1.9
