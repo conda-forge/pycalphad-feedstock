@@ -1,5 +1,5 @@
-{% set version = "0.4.2" %}
-{% set sha256 = "5dd8407d2ca1de72ba2d05b9f0471849e0f32089181b3b94c258f12e94f72c76" %}
+{% set version = "0.5" %}
+{% set sha256 = "01d8ec200da67d6d54bb07630166a5449145a5dab10eb28c0671b71bce75ada5" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - python
+    - cython
     - setuptools
     - matplotlib
     - pandas
@@ -25,24 +26,21 @@ requirements:
     - sympy
     - pyparsing
     - tinydb
-    - autograd
     - scipy
-    - tqdm
     - dask >=0.10
     - distributed
     - numpy >=1.9
     - dill
   run:
     - python
+    - cython
     - matplotlib
     - pandas
     - xarray !=0.8
     - sympy
     - pyparsing
     - tinydb
-    - autograd
     - scipy
-    - tqdm
     - dask >=0.10
     - distributed
     - numpy >=1.9
