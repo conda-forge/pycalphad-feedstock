@@ -1,5 +1,5 @@
-{% set version = "0.5.1" %}
-{% set sha256 = "d77d0f9bbd31e61e60f557d8e928594fe513f42e2f3efff1e73014c96a52b1f4" %}
+{% set version = "0.5.2" %}
+{% set sha256 = "c0b2cc3d11d024f7192d0c4c6fec399771b199a003d185dca3cadbf469751ff9" %}
 package:
   name: pycalphad
   version: {{ version }}
