@@ -1,5 +1,5 @@
-{% set version = "0.5.2.post1" %}
-{% set sha256 = "d634b708ffc0159ca4df056a359bb656e059c60f937c6ee949fe5ed65b2387e1" %}
+{% set version = "0.6" %}
+{% set sha256 = "b85c1e6191ee40ea3da7dd5580b4091ad52ce8a3bac3541408c7d5ecc88894be" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -10,6 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  skip: true  # [win]
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
@@ -27,10 +28,11 @@ requirements:
     - pyparsing
     - tinydb
     - scipy
-    - dask >=0.10
+    - dask >=0.15
     - distributed
     - numpy >=1.9
     - dill
+    - cyipopt
   run:
     - python
     - cython
@@ -41,10 +43,11 @@ requirements:
     - pyparsing
     - tinydb
     - scipy
-    - dask >=0.10
+    - dask >=0.15
     - distributed
     - numpy >=1.9
     - dill
+    - cyipopt
 
 test:
   imports:
