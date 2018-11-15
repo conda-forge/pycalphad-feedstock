@@ -1,5 +1,5 @@
-{% set version = "0.7" %}
-{% set sha256 = "b11862cbd547a206991153f6057f089238d27798e0ce197568fc9aa4a79ecc2d" %}
+{% set version = "0.7.1.post1" %}
+{% set sha256 = "cb021c4242fe9c5737e45a199f96b59ac4d54a3353270d6df7d7052dd1d8a078" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
