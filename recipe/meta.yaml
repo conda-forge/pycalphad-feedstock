@@ -1,5 +1,5 @@
-{% set version = "0.7.1.post2" %}
-{% set sha256 = "b2efef313e5c8b3ac2b6eb8f30c041d1e05c99ae425b50be020a7c93d426fcc2" %}
+{% set version = "0.8" %}
+{% set sha256 = "1e044fa24d0bb08c881511610a5db65ef66cf11a588de8f3751d933351a29c19" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -17,39 +17,45 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - python
-    - cython
     - setuptools
     - matplotlib
     - pandas
     - nose
     - mock
-    - xarray !=0.8
-    - sympy >=1.2
+    - xarray >=0.11.2
+    - sympy ==1.4
     - pyparsing
-    - tinydb
+    - tinydb >=3.8
     - scipy
-    - dask >=0.18
+    - dask >=1.2.0
     - distributed
     - numpy >=1.13
     - dill
+    - cython >=0.24
     - cyipopt
+    - python-symengine ==0.4.0
+    - symengine ==0.4.0
+
   run:
     - python
-    - cython
     - matplotlib
     - pandas
-    - xarray !=0.8
-    - sympy >=1.2
+    - xarray >=0.11.2
+    - sympy ==1.4
     - pyparsing
-    - tinydb
+    - tinydb >=3.8
     - scipy
-    - dask >=0.18
+    - dask >=1.2.0
     - distributed
     - {{ pin_compatible('numpy') }}
+    - cython >=0.24
     - dill
     - cyipopt
+    - python-symengine ==0.4.0
+    - symengine ==0.4.0
 
 test:
   imports:
