@@ -66,6 +66,7 @@ test:
 about:
   home: https://pycalphad.org/
   license: MIT
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
   summary: 'CALPHAD tools for designing thermodynamic models, calculating phase diagrams and investigating phase equilibria.'
   doc_url: https://docs.pycalphad.org/
   dev_url: https://github.com/pycalphad/pycalphad
