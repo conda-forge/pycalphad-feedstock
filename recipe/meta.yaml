@@ -1,5 +1,5 @@
-{% set version = "0.8" %}
-{% set sha256 = "1e044fa24d0bb08c881511610a5db65ef66cf11a588de8f3751d933351a29c19" %}
+{% set version = "0.8.1.post1" %}
+{% set sha256 = "4c171fe018be4de7a7fc1dfbb5a8f5714a1ac0065f27cd444b83653659e079dd" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -35,8 +35,8 @@ requirements:
     - dill
     - cython >=0.24
     - cyipopt
-    - python-symengine ==0.4.0
-    - symengine ==0.4.0
+    - python-symengine ==0.5.1
+    - symengine ==0.5.0
 
   run:
     - python
@@ -53,8 +53,8 @@ requirements:
     - cython >=0.24
     - dill
     - cyipopt
-    - python-symengine ==0.4.0
-    - symengine ==0.4.0
+    - python-symengine ==0.5.1
+    - symengine ==0.5.0
 
 test:
   imports:
@@ -66,6 +66,7 @@ test:
 about:
   home: https://pycalphad.org/
   license: MIT
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
   summary: 'CALPHAD tools for designing thermodynamic models, calculating phase diagrams and investigating phase equilibria.'
   doc_url: https://docs.pycalphad.org/
   dev_url: https://github.com/pycalphad/pycalphad
