@@ -36,7 +36,7 @@ requirements:
     - cython >=0.24
     - cyipopt
     - python-symengine ==0.5.1
-    - symengine ==0.5.1
+    - symengine ==0.5.0
 
   run:
     - python
@@ -54,7 +54,7 @@ requirements:
     - dill
     - cyipopt
     - python-symengine ==0.5.1
-    - symengine ==0.5.1
+    - symengine ==0.5.0
 
 test:
   imports:
