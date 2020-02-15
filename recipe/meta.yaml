@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
   host:
     - python
     - setuptools
-    - matplotlib
+    - matplotlib-base
     - pandas
     - nose
     - mock
@@ -40,7 +40,7 @@ requirements:
 
   run:
     - python
-    - matplotlib
+    - matplotlib-base
     - pandas
     - xarray >=0.11.2
     - sympy ==1.4
