@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: true  # [win]
+  skip: true  # [win and py2k]
   number: 0
 
 requirements:
@@ -18,7 +18,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python >= 3.6
+    - python
     - setuptools
     - matplotlib
     - pandas
@@ -37,7 +37,7 @@ requirements:
     - symengine ==0.6.0
 
   run:
-    - python >= 3.6
+    - python
     - matplotlib
     - pandas
     - xarray >=0.11.2
