@@ -1,5 +1,5 @@
-{% set version = "0.8.1.post1" %}
-{% set sha256 = "4c171fe018be4de7a7fc1dfbb5a8f5714a1ac0065f27cd444b83653659e079dd" %}
+{% set version = "0.8.2" %}
+{% set sha256 = "e3cfea3c44f0c6e8fcffee2b1b0b1bb17996fd497cef215ab1a5812263b11c65" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -66,8 +66,8 @@ test:
 about:
   home: https://pycalphad.org/
   license: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
-  summary: 'CALPHAD tools for designing thermodynamic models, calculating phase diagrams and investigating phase equilibria.'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
+  summary: CALPHAD tools for designing thermodynamic models, calculating phase diagrams and investigating phase equilibria.
   doc_url: https://docs.pycalphad.org/
   dev_url: https://github.com/pycalphad/pycalphad
 
