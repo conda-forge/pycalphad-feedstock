@@ -1,5 +1,5 @@
-{% set version = "0.8.1.post1" %}
-{% set sha256 = "4c171fe018be4de7a7fc1dfbb5a8f5714a1ac0065f27cd444b83653659e079dd" %}
+{% set version = "0.8.2" %}
+{% set sha256 = "e3cfea3c44f0c6e8fcffee2b1b0b1bb17996fd497cef215ab1a5812263b11c65" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -11,6 +11,7 @@ source:
 
 build:
   skip: true  # [win]
+  skip: true  # [py2k]
   number: 0
 
 requirements:
@@ -25,36 +26,32 @@ requirements:
     - nose
     - mock
     - xarray >=0.11.2
-    - sympy ==1.4
+    - sympy ==1.5.1
     - pyparsing
     - tinydb >=3.8
     - scipy
-    - dask >=1.2.0
-    - distributed
     - numpy >=1.13
     - dill
     - cython >=0.24
     - cyipopt
-    - python-symengine ==0.5.1
-    - symengine ==0.5.0
+    - python-symengine ==0.6.0
+    - symengine ==0.6.0
 
   run:
     - python
     - matplotlib
     - pandas
     - xarray >=0.11.2
-    - sympy ==1.4
+    - sympy ==1.5.1
     - pyparsing
     - tinydb >=3.8
     - scipy
-    - dask >=1.2.0
-    - distributed
     - {{ pin_compatible('numpy') }}
     - cython >=0.24
     - dill
     - cyipopt
-    - python-symengine ==0.5.1
-    - symengine ==0.5.0
+    - python-symengine ==0.6.0
+    - symengine ==0.6.0
 
 test:
   imports:
@@ -66,8 +63,8 @@ test:
 about:
   home: https://pycalphad.org/
   license: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
-  summary: 'CALPHAD tools for designing thermodynamic models, calculating phase diagrams and investigating phase equilibria.'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
+  summary: CALPHAD tools for designing thermodynamic models, calculating phase diagrams and investigating phase equilibria.
   doc_url: https://docs.pycalphad.org/
   dev_url: https://github.com/pycalphad/pycalphad
 
