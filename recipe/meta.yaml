@@ -18,39 +18,39 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python
-    - setuptools
-    - matplotlib-base
-    - pandas
-    - nose
-    - mock
-    - xarray >=0.11.2
-    - sympy ==1.5.1
-    - pyparsing
-    - tinydb >=3.8
-    - scipy
-    - numpy >=1.13
-    - dill
-    - cython >=0.24
     - cyipopt >=0.3
+    - cython >=0.24
+    - dill
+    - matplotlib-base
+    - mock
+    - nose
+    - numpy >=1.13
+    - pandas
+    - pyparsing
+    - python
     - python-symengine ==0.6.1
+    - scipy
+    - setuptools
     - symengine ==0.6.0
+    - sympy ==1.5.1
+    - tinydb >=3.8
+    - xarray >=0.11.2
 
   run:
-    - python
-    - matplotlib-base
-    - pandas
-    - xarray >=0.11.2
-    - sympy ==1.5.1
-    - pyparsing
-    - tinydb >=3.8
-    - scipy
-    - {{ pin_compatible('numpy') }}
+    - cyipopt >=0.3
     - cython >=0.24
     - dill
-    - cyipopt >=0.3
+    - matplotlib-base
+    - {{ pin_compatible('numpy') }}
+    - pandas
+    - pyparsing
+    - python
     - python-symengine ==0.6.1
+    - scipy
     - symengine ==0.6.0
+    - sympy ==1.5.1
+    - tinydb >=3.8
+    - xarray >=0.11.2
 
 test:
   imports:
