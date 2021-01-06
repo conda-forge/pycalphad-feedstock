@@ -20,12 +20,8 @@ requirements:
   host:
     - cyipopt >=0.3
     - cython >=0.24
-    - dill
     - matplotlib-base
-    - mock
-    - nose
     - numpy >=1.13
-    - pandas
     - pyparsing
     - python
     - python-symengine ==0.6.1
@@ -39,10 +35,8 @@ requirements:
   run:
     - cyipopt >=0.3
     - cython >=0.24
-    - dill
     - matplotlib-base
     - {{ pin_compatible('numpy') }}
-    - pandas
     - pyparsing
     - python
     - python-symengine ==0.6.1
