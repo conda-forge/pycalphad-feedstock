@@ -1,0 +1,22 @@
+From 96abb99bc8d90c898749e35ca5a99166ee5e243a Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Mon, 29 Mar 2021 15:42:06 +0200
+Subject: [PATCH] Update setup.py
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 64fa2d6e..9fd2df80 100644
+--- a/setup.py
++++ b/setup.py
+@@ -65,7 +65,7 @@ def read(fname):
+     license='MIT',
+     long_description=read('README.rst'),
+     url='https://pycalphad.org/',
+-    install_requires=['matplotlib', 'pandas', 'xarray>=0.11.2', 'sympy==1.5.1', 'pyparsing', 'Cython>=0.24',
++    install_requires=['matplotlib', 'pandas', 'xarray>=0.11.2', 'sympy==1.7', 'pyparsing', 'Cython>=0.24',
+                       'tinydb>=3.8', 'scipy', 'numpy>=1.13', 'ipopt', 'symengine==0.6.1'],
+     classifiers=[
+         # How mature is this project? Common values are
