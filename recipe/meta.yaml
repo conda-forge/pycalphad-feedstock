@@ -8,10 +8,12 @@ source:
   fn: pycalphad-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pycalphad/pycalphad-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - sympy.patch  # this patch can be removed with the next release
 
 build:
   skip: true  # [py2k]
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -52,6 +54,10 @@ test:
     - pycalphad.core
     - pycalphad.io
     - pycalphad.plot
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://pycalphad.org/
