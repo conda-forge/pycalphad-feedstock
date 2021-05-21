@@ -8,8 +8,6 @@ source:
   fn: pycalphad-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pycalphad/pycalphad-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - sympy.patch  # this patch can be removed with the next release
 
 build:
   skip: true  # [py2k]
@@ -20,31 +18,31 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cyipopt >=0.3
+    - cyipopt >=1.0
     - cython >=0.24
-    - matplotlib-base
+    - matplotlib-base >=3.3
     - numpy >=1.13
     - pyparsing
     - python
-    - python-symengine ==0.6.1
+    - python-symengine ==0.7.2
     - scipy
     - setuptools
-    - symengine ==0.6.0
-    - sympy ==1.7
+    - symengine ==0.7.0
+    - sympy ==1.8
     - tinydb >=3.8
     - xarray >=0.11.2
 
   run:
-    - cyipopt >=0.3
+    - cyipopt >=1.0
     - cython >=0.24
-    - matplotlib-base
+    - matplotlib-base >=3.3
     - {{ pin_compatible('numpy') }}
     - pyparsing
     - python
-    - python-symengine ==0.6.1
+    - python-symengine ==0.7.2
     - scipy
-    - symengine ==0.6.0
-    - sympy ==1.7
+    - symengine ==0.7.0
+    - sympy ==1.8
     - tinydb >=3.8
     - xarray >=0.11.2
 
