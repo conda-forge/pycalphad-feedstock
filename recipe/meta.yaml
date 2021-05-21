@@ -1,5 +1,5 @@
-{% set version = "0.8.4" %}
-{% set sha256 = "c31c316d1bbac50ce6c7229e8130c38729c7ff387c60460c770bd4325e7aba17" %}
+{% set version = "0.8.5" %}
+{% set sha256 = "5d7d55e7f68947df387e4f76edad82391a17fb3e97d70cbf72ae5306dcd135ab" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -8,43 +8,41 @@ source:
   fn: pycalphad-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pycalphad/pycalphad-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - sympy.patch  # this patch can be removed with the next release
 
 build:
   skip: true  # [py2k]
-  number: 3
+  number: 0
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cyipopt >=0.3
+    - cyipopt >=1.0
     - cython >=0.24
-    - matplotlib-base
+    - matplotlib-base >=3.3
     - numpy >=1.13
     - pyparsing
     - python
-    - python-symengine ==0.6.1
+    - python-symengine ==0.7.2
     - scipy
     - setuptools
-    - symengine ==0.6.0
-    - sympy ==1.7
+    - symengine ==0.7.0
+    - sympy ==1.8
     - tinydb >=3.8
     - xarray >=0.11.2
 
   run:
-    - cyipopt >=0.3
+    - cyipopt >=1.0
     - cython >=0.24
-    - matplotlib-base
+    - matplotlib-base >=3.3
     - {{ pin_compatible('numpy') }}
     - pyparsing
     - python
-    - python-symengine ==0.6.1
+    - python-symengine ==0.7.2
     - scipy
-    - symengine ==0.6.0
-    - sympy ==1.7
+    - symengine ==0.7.0
+    - sympy ==1.8
     - tinydb >=3.8
     - xarray >=0.11.2
 
