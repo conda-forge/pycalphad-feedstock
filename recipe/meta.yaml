@@ -18,30 +18,36 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cyipopt >=1.0
     - cython >=0.24
+    - importlib_metadata  # drop when pycalphad drops support for Python<3.8
     - matplotlib-base >=3.3
     - numpy >=1.13
-    - pyparsing
-    - python
+    - pyparsing >=2.4
+    - pytest
+    - pytest-cov
+    - python >=3.7
     - python-symengine ==0.7.2
     - scipy
     - setuptools
-    - symengine ==0.7.0
+    - setuptools_scm >=6.0
+    - symengine ==0.7.2
     - sympy ==1.8
     - tinydb >=3.8
     - xarray >=0.11.2
 
   run:
-    - cyipopt >=1.0
     - cython >=0.24
+    - importlib_metadata  # drop when pycalphad drops support for Python<3.8
     - matplotlib-base >=3.3
     - {{ pin_compatible('numpy') }}
-    - pyparsing
-    - python
+    - pyparsing >=2.4
+    - pytest
+    - pytest-cov
+    - python >=3.7
     - python-symengine ==0.7.2
     - scipy
-    - symengine ==0.7.0
+    - setuptools_scm >=6.0
+    - symengine ==0.7.2
     - sympy ==1.8
     - tinydb >=3.8
     - xarray >=0.11.2
