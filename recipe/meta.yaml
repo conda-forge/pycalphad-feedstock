@@ -25,7 +25,7 @@ requirements:
     - pyparsing >=2.4
     - pytest
     - pytest-cov
-    - python >=3.7
+    - python
     - python-symengine ==0.7.2
     - scipy
     - setuptools
@@ -43,7 +43,7 @@ requirements:
     - pyparsing >=2.4
     - pytest
     - pytest-cov
-    - python >=3.7
+    - python
     - python-symengine ==0.7.2
     - scipy
     - setuptools_scm >=6.0
