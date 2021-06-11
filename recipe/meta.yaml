@@ -19,7 +19,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    # numpy is ABI backwards incompatible for v1.20. Earlier versions (v1.16) may break PyPy builds
+    # numpy is ABI backwards incompatible for v1.20. Earlier versions (v1.16) may break OSX Arm builds
     - numpy >=1.19,<1.20                     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
