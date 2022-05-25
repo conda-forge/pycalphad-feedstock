@@ -1,5 +1,5 @@
-{% set version = "0.10.0" %}
-{% set sha256 = "1138da53f5e2c0c68e98033e38bee18c9c6242e55bab42d75d8164ec7159b4d9" %}
+{% set version = "0.10.1" %}
+{% set sha256 = "8325a327280d971b366da0c6c4bee88ade4b35aa07fccc028381f7c543535e9a" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py2k]
   skip: true  # [py<37]
-  number: 1
+  number: 0
 
 requirements:
   build:
