@@ -34,6 +34,7 @@ requirements:
   run:
     - cython >=0.24
     - importlib_metadata  # drop when pycalphad drops support for Python<3.8
+    - importlib_resources  # drop when pycalphad drops support for Python<3.8
     - matplotlib-base >=3.3
     - {{ pin_compatible('numpy') }}
     - pyparsing >=2.4
