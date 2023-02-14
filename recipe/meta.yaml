@@ -1,5 +1,5 @@
-{% set version = "0.10.1" %}
-{% set sha256 = "8325a327280d971b366da0c6c4bee88ade4b35aa07fccc028381f7c543535e9a" %}
+{% set version = "0.10.2" %}
+{% set sha256 = "3f5d14f2924d9e4d4809b9af626b8e7c309ceb1739fb55458c3dfe0603b9ed93" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -41,7 +41,7 @@ requirements:
     - pytest
     - pytest-cov
     - python
-    - python-symengine ==0.9.0
+    - python-symengine ==0.9.2
     - scipy
     - setuptools_scm >=6.0
     - symengine ==0.9.0
