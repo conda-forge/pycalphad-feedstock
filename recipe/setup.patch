@@ -1,0 +1,22 @@
+From 5348fbd4de6e277c98dfe8cccddccfb23cb7d776 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Mon, 13 Feb 2023 19:19:58 -0700
+Subject: [PATCH] Update setup.py
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 89651b045..3c051606f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -68,7 +68,7 @@ def read(fname):
+         'pytest-cov',
+         'scipy',
+         'setuptools_scm[toml]>=6.0',
+-        'symengine==0.9.0',  # python-symengine on conda-forge
++        'symengine==0.9.2',  # python-symengine on conda-forge
+         'tinydb>=3.8',
+         'xarray>=0.11.2',
+     ],
