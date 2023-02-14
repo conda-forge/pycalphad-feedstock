@@ -8,6 +8,8 @@ source:
   fn: pycalphad-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pycalphad/pycalphad-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - setup.patch
 
 build:
   skip: true  # [py2k]
