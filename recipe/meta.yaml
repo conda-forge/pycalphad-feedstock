@@ -56,7 +56,7 @@ test:
     - pycalphad.plot
   commands:
     - pip check
-    - pytest --pyargs pycalphad
+    - pytest --import-mode=append --pyargs pycalphad
   requires:
     - pip
 
