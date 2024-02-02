@@ -12,6 +12,7 @@ source:
 build:
   skip: true  # [py2k]
   skip: true  # [py<38]
+  skip: true  # [python_impl == 'pypy']
   number: 0
 
 requirements:
