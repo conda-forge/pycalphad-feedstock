@@ -55,6 +55,7 @@ test:
     - pycalphad.plot
   commands:
     - pip check
+    - rm $(pypy -c "import sysconfig as sc; print(sc.get_paths()['platstdlib'])")/__init__.py || true
     - pytest --pyargs pycalphad
   requires:
     - pip
