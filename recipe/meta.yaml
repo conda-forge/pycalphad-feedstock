@@ -55,7 +55,7 @@ test:
     - pycalphad.plot
   commands:
     - pip check
-    - rm $(pypy -c "import sysconfig as sc; print(sc.get_paths()['platstdlib'])")/__init__.py || true
+    - pypy -c "import os, sysconfig as sc; os.unlink(os.path.join(sc.get_paths()['platstdlib'], '__init__.py'))" || true # workaround for conda-forge/pycalphad-feedstock#55
     - pytest --pyargs pycalphad
   requires:
     - pip
