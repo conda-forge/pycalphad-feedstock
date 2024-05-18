@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py2k]
   skip: true  # [py<38]
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - cython >=0.24
@@ -35,7 +36,6 @@ requirements:
     - cython >=0.24
     - importlib_resources  # drop when pycalphad drops support for Python<3.9
     - matplotlib-base >=3.3
-    - {{ pin_compatible('numpy') }}
     - pyparsing >=2.4
     - pytest
     - pytest-cov
