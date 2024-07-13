@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py2k]
-  skip: true  # [py<38]
+  skip: true  # [py<39]
   number: 0
 
 requirements:
@@ -19,13 +19,13 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - numpy >=2                              # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - cython >=0.24
-    - numpy
+    - numpy >=2
     - scipy
     - pip
     - python
@@ -34,9 +34,8 @@ requirements:
     - setuptools_scm >=6.0
   run:
     - cython >=0.24
-    - importlib_resources  # drop when pycalphad drops support for Python<3.9
     - matplotlib-base >=3.3
-    - {{ pin_compatible('numpy') }}
+    - numpy
     - pyparsing >=2.4
     - pytest
     - pytest-cov
