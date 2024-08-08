@@ -1,5 +1,5 @@
-{% set version = "0.10.4.post1" %}
-{% set sha256 = "ee9282e949e4b10b81eec8230f3b69bb74839c45561eb6c4708d49b47937553a" %}
+{% set version = "0.10.5" %}
+{% set sha256 = "cf0605407b49bf5e50a25ab935be485e59685c5a1ffc5ea7d1dca945a14a8be7" %}
 package:
   name: pycalphad
   version: {{ version }}
@@ -11,8 +11,8 @@ source:
 
 build:
   skip: true  # [py2k]
-  skip: true  # [py<38]
-  number: 1
+  skip: true  # [py<39]
+  number: 0
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - cython >=0.24
@@ -33,7 +34,6 @@ requirements:
     - setuptools_scm >=6.0
   run:
     - cython >=0.24
-    - importlib_resources  # drop when pycalphad drops support for Python<3.9
     - matplotlib-base >=3.3
     - {{ pin_compatible('numpy') }}
     - pyparsing >=2.4
