@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py2k]
   skip: true  # [py<39]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -35,7 +35,6 @@ requirements:
   run:
     - cython >=0.24
     - matplotlib-base >=3.3
-    - {{ pin_compatible('numpy') }}
     - pyparsing >=2.4
     - pytest
     - pytest-cov
