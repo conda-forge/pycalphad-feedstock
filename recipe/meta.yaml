@@ -25,7 +25,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - cython >=0.24
-    - numpy >=2.0                            # [python_impl != "pypy"]
+    - numpy >=2.0                            # [python not endswith "pypy"]
     - scipy
     - pip
     - python
