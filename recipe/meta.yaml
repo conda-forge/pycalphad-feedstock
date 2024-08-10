@@ -19,13 +19,13 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - numpy >=2.0                            # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - cython >=0.24
-    - numpy
+    - numpy >=2.0
     - scipy
     - pip
     - python
@@ -35,15 +35,18 @@ requirements:
   run:
     - cython >=0.24
     - matplotlib-base >=3.3
+    - pint
     - pyparsing >=2.4
     - pytest
     - pytest-cov
     - python
     - python-symengine >=0.9.2
+    - runtype
     - scipy
-    - setuptools_scm >=6.0
+    - setuptools-scm >=6.0
     - symengine >=0.9
     - tinydb >=3.8
+    - typing-extensions # drop when pycalphad drops support for Python<3.13
     - xarray >=0.11.2
 
 test:
