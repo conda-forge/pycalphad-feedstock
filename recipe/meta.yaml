@@ -1,12 +1,12 @@
-{% set version = "0.11.0" %}
-{% set sha256 = "6fc874a37582c35964c672424e65c940579b5e0fbd74bdb41015a21833643eb7" %}
+{% set version = "0.11.1" %}
+{% set sha256 = "57b5c8618d7168c02648b99de6545b24dd60591f96bcc3fd2a260e57663e727e" %}
 package:
   name: pycalphad
   version: {{ version }}
 
 source:
   fn: pycalphad-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/p/pycalphad/pycalphad-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pycalphad/pycalphad-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
